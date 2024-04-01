@@ -1,9 +1,9 @@
 // Read in the JSON data
 d3.json("https://static.bc-edx.com/data/dl-1-2/m14/lms/starter/samples.json").then(data => {
     // Populate the dropdown menu
-    var dropdownMenu = d3.select("#selDataset");
+    var select = d3.select("#selDataset");
     data.names.forEach(name => {
-        dropdownMenu.append("option").text(name).property("value", name);
+        select.append("option").text(name).property("value", name);
     });
 
     // Initialize the dashboard with the first individual's data
